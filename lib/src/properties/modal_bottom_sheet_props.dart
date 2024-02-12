@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
+const double _defaultScrollControlDisabledMaxHeightRatio = 9.0 / 16.0;
+
 class ModalBottomSheetProps {
   final ShapeBorder? shape;
   final bool useRootNavigator;
   final BoxConstraints? constraints;
   final double? elevation;
+  final double scrollControlDisabledMaxHeightRatio;
   final Color? barrierColor;
   final Color? backgroundColor;
   final bool barrierDismissible;
@@ -31,5 +34,7 @@ class ModalBottomSheetProps {
     this.isScrollControlled = true,
     this.padding = EdgeInsets.zero,
     this.useSafeArea = true,
+    this.scrollControlDisabledMaxHeightRatio =
+        _defaultScrollControlDisabledMaxHeightRatio,
   });
 }
